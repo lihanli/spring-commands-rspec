@@ -14,7 +14,6 @@ module Spring
       end
 
       def call
-        ::RSpec.configuration.start_time = Time.now if defined?(::RSpec.configuration)
         load Gem.bin_path(gem_name, exec_name)
       end
     end
